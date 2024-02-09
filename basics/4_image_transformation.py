@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 
-image = cv.imread('demo.jpg')
+image = cv.imread('basics\media\demo.jpg')
 cv.imshow('Image' , image)
 
 # image transformation
@@ -19,11 +19,14 @@ def rotate(image , rotation_angle , rotpoint = None):
     dimension = (width , height)
     return cv.warpAffine(image , mat , dimension)
 
+# resizing the image
 resized = cv.resize(image , (500 , 500) , interpolation=cv.INTER_AREA)
 
-transformed = transform(resized , -100 , 100)
+# transformation
+transformed = transform(resized , -100 , -100)
 cv.imshow('Transformed' , transformed)
 
+# image rotation
 rotated = rotate(resized , 45)
 cv.imshow('Rotated' , rotated)
 

@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 
-img = cv.imread('basics/demo.jpg')
+img = cv.imread('basics/media/demo.jpg')
 img = cv.resize(img , (500,600), interpolation = cv.INTER_AREA)
 cv.imshow("Image" , img)
 

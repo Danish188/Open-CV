@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-image = cv.imread('basics/demo.jpg')
+image = cv.imread('basics/media/demo.jpg')
 image = cv.resize(image , (500 , 600) , interpolation=cv.INTER_AREA)
 cv.imshow('Image' , image)
 

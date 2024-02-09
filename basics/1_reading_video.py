@@ -1,6 +1,6 @@
 import cv2 as cv
 
-capture = cv.VideoCapture('car.mp4')
+capture = cv.VideoCapture('basics\media\car.mp4')
 
 def rescale(f , scale = 0.50):
     width = int(f.shape[1] * scale)
@@ -13,7 +13,8 @@ while True:
     frame_resized = rescale(frame)
     cv.imshow('Video' ,frame)
     cv.imshow('rescaled_video' , frame_resized)
-    if cv.waitKey(20) & 0xff == ord('d'):
+    if cv.waitKey(20) & 0xff == ord('z'):
         break
+    
 capture.release()
 cv.destroyAllWindows()
